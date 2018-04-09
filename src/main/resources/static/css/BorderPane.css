@@ -1,0 +1,10 @@
+.borderPane-top{
+    /*-fx-background-color: #e0e0e0;*/
+    -fx-pref-width: 600;
+    -fx-pref-height: 85;
+}
+
+.borderPane-left{
+    -fx-pref-height: 317;
+    -fx-pref-width: 253;
+}

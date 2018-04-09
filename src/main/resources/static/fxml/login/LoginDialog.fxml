@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ButtonType?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<DialogPane fx:id="loginDialogPane" contentText="外包人员管理系统" headerText="外包人员管理系统" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cn.client.ui.login.LoginDialogController">
+    <header>
+      <AnchorPane fx:id="LoginDialog" minHeight="0.0" minWidth="0.0" prefHeight="68.0" prefWidth="400.0">
+         <children>
+            <ImageView fitHeight="230.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/uiImage/login.jpg" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+    </header>
+    <content>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="125.0" prefWidth="400.0">
+         <children>
+            <Label layoutX="14.0" layoutY="37.0" text="用户名：">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="87.0" text="密码：">
+               <font>
+                  <Font name="System Italic" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="username" layoutX="94.0" layoutY="32.0" prefHeight="28.0" prefWidth="200.0" />
+            <PasswordField fx:id="password" layoutX="94.0" layoutY="83.0" prefHeight="28.0" prefWidth="200.0" />
+            <Separator layoutY="5.0" prefHeight="13.0" prefWidth="400.0" />
+         </children></AnchorPane>
+    </content>
+   <buttonTypes>
+      <ButtonType fx:constant="FINISH" />
+      <ButtonType fx:constant="CLOSE" />
+      <ButtonType fx:constant="NEXT" />
+   </buttonTypes>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</DialogPane>

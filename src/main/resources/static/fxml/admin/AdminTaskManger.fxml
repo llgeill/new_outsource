@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@/static/css/BorderPane.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cn.client.ui.admin.AdminTaskMangerController">
+   <children>
+      <BorderPane fx:id="adminBorderPane" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane styleClass="borderPane-top" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="70.0" layoutY="11.0" prefHeight="62.0" prefWidth="118.0" text="任务一览">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="20.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@/static/image/uiImage/userViewImage/userview1.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <AnchorPane style="-fx-background-color: #EAEAEA;" styleClass="borderPane-left" BorderPane.alignment="CENTER">
+               <children>
+                  <ScrollPane fitToHeight="true" fitToWidth="true" focusTraversable="false" hbarPolicy="NEVER" layoutY="-3.0" prefHeight="353.0" prefWidth="192.0" style="-fx-control-inner-background: transparent; -fx-background-color: transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <content>
+                        <VBox fx:id="workProjectList" cache="true" prefHeight="55.0" prefWidth="181.0" style="-fx-control-inner-background: transparent; fx-background-insets: 0, 0, 1, 2;">
+                           <children>
+                              <StackPane maxHeight="-Infinity" minHeight="-Infinity" onMouseClicked="#addWorkProjectClick" onMouseEntered="#addWorkProjectEnter" onMouseExited="#addWorkProjectExit" prefHeight="55.0" prefWidth="999.0" style="-fx-border-color: white white #949494 white; -fx-background-color: pink; -fx-border-width: 1px;">
+                                 <children>
+                                    <Label alignment="CENTER" text="新增项目" />
+                                 </children>
+                              </StackPane>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="DISAPPEAR" />
+                           </cursor></VBox>
+                     </content>
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane fx:id="rightBorder" prefHeight="353.0" prefWidth="380.0" stylesheets="@../../css/DialogStyle.css" BorderPane.alignment="CENTER">
+               <children>
+                  <GridPane prefHeight="356.0" prefWidth="408.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" style="-fx-background-color: transparent; -fx-border-color: #bdbdbd;">
+                           <content>
+                              <VBox fx:id="companyTaskNo">
+                                 <children>
+                                    <StackPane style="-fx-background-color: transparent;">
+                                       <children>
+                                          <Label alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="55.0" prefWidth="999.0" text="未认领">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="55.0" style="-fx-border-color: white white #949494 white; -fx-background-color: RGB(25,122,182); -fx-border-width: 1px;">
+                                       <children>
+                                          <Label alignment="CENTER" text="新增任务" textFill="WHITE" />
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                              </VBox>
+                           </content>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                        </ScrollPane>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" layoutX="10.0" layoutY="10.0" style="-fx-background-color: transparent; -fx-border-color: #bdbdbd transparent transparent transparent;" GridPane.columnIndex="1">
+                           <content>
+                              <VBox fx:id="companyTaskHave">
+                                 <children>
+                                    <StackPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="55.0" style="-fx-background-color: transparent;">
+                                       <children>
+                                          <Label alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="55.0" prefWidth="999.0" text="已认领">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                              </VBox>
+                           </content>
+                        </ScrollPane>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" layoutX="10.0" layoutY="10.0" style="-fx-background-color: transparent; -fx-border-color: #bdbdbd;" GridPane.columnIndex="2">
+                           <content>
+                              <VBox fx:id="companyTaskYes">
+                                 <children>
+                                    <StackPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="55.0" style="-fx-background-color: transparent;">
+                                       <children>
+                                          <Label alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="55.0" prefWidth="999.0" text="已完成">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                              </VBox>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

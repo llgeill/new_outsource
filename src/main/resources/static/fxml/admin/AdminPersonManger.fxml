@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@/static/css/BorderPane.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cn.client.ui.admin.AdminPersonMangerController">
+   <children>
+      <BorderPane fx:id="adminBorderPane" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane styleClass="borderPane-top" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="70.0" layoutY="11.0" prefHeight="62.0" prefWidth="118.0" text="成员审核">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="20.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@/static/image/uiImage/userViewImage/userview2.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <AnchorPane styleClass="borderPane-left" BorderPane.alignment="CENTER">
+               <children>
+                  <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" layoutY="-3.0" prefHeight="353.0" prefWidth="192.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <content>
+                        <VBox fx:id="companyList" prefHeight="55.0" prefWidth="181.0">
+                           <children>
+                              <StackPane maxHeight="-Infinity" onMouseClicked="#addCompanyClick" onMouseEntered="#addCompanyEnter" onMouseExited="#addCompanyExit" prefHeight="55.0" prefWidth="999.0" style="-fx-border-color: white white #949494 white; -fx-background-color: pink; -fx-border-width: 1px;">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="62.0" prefWidth="180.0" text="新增公司" />
+                                 </children>
+                              </StackPane>
+                           </children></VBox>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane fx:id="rightBorder" prefHeight="353.0" prefWidth="380.0" style="-fx-border-color: #bdbdbd white white #bdbdbd;" BorderPane.alignment="CENTER">
+               <children>
+                  <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" prefHeight="353.0" prefWidth="408.0" style="-fx-background-color: transparent;" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <content>
+                        <FlowPane fx:id="userList" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

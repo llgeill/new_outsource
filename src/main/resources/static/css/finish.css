@@ -1,0 +1,10 @@
+.label{
+    -fx-border-color: white white #949494 white;
+    -fx-text-fill: white;
+    -fx-border-width: 1px;
+    -fx-alignment: center;
+    -fx-arc-height: 35.0px;
+    -fx-pref-height: 55px;
+    -fx-pref-width: 999px;
+    -fx-background-color: RGB(92,198,139);
+}

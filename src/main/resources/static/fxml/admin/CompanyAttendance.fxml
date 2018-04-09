@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@/static/css/BorderPane.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cn.client.ui.admin.AdminAttendanceController">
+   <children>
+      <BorderPane fx:id="StaffAttendancePance" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="26.0" prefWidth="600.0" styleClass="borderPane-top" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="75.0" layoutY="11.0" prefHeight="62.0" prefWidth="118.0" text="成员一览">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="35.0" fitWidth="33.0" layoutX="25.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@/static/image/uiImage/userViewImage/userview3.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <ScrollPane prefHeight="353.0" prefWidth="253.0" style="-fx-background-color: transparent;" BorderPane.alignment="CENTER">
+               <content>
+                  <VBox fx:id="companyList" onMouseClicked="#Company_MouseClick" onMouseEntered="#Company_MouseEnter" onMouseExited="#Company_MouseExit" prefHeight="351.0" prefWidth="250.0">
+                     <children>
+                        <StackPane prefHeight="339.0" prefWidth="219.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Label text="Label" />
+                           </children>
+                        </StackPane>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #bdbdbd transparent transparent #bdbdbd;" BorderPane.alignment="CENTER">
+               <children>
+                  <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="327.0" prefWidth="347.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <content>
+                        <FlowPane rowValignment="TOP" />
+                     </content>
+                  </ScrollPane>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

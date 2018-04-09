@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cn.client.ui.admin.AdminProgressController">
+   <children>
+      <BorderPane fx:id="adminBorderPane" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="85.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="70.0" layoutY="11.0" prefHeight="62.0" prefWidth="118.0" text="进度一览">
+                     <font>
+                        <Font name="System Bold Italic" size="21.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="20.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@/static/image/uiImage/userViewImage/userview4.png" />
+                     </image></ImageView>
+               </children>
+               <BorderPane.margin>
+                  <Insets left="1.0" />
+               </BorderPane.margin>
+            </AnchorPane>
+         </top>
+         <left>
+            <AnchorPane BorderPane.alignment="CENTER">
+               <children>
+                  <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" layoutY="-3.0" prefHeight="353.0" prefWidth="253.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <content>
+                        <VBox fx:id="workProjectList" prefHeight="55.0" prefWidth="253.0" style="-fx-background-color: transparent;" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #D3D3D3;" BorderPane.alignment="CENTER">
+               <children>
+                  <BorderPane prefHeight="315.0" prefWidth="440.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <top>
+                        <AnchorPane prefHeight="65.0" prefWidth="345.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <ProgressBar fx:id="workProjectProgressBar" layoutX="42.0" prefHeight="57.0" prefWidth="330.0" progress="0.47" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="42.0" AnchorPane.rightAnchor="68.0" AnchorPane.topAnchor="10.0">
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
+                              </ProgressBar>
+                              <ProgressIndicator fx:id="workProjectProgressIndicator" layoutX="383.0" layoutY="-2.0" prefHeight="57.0" prefWidth="56.0" progress="0.42" AnchorPane.bottomAnchor="9.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                           </children>
+                        </AnchorPane>
+                     </top>
+                     <center>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <BarChart fx:id="workProjectChart" prefHeight="265.0" prefWidth="440.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <xAxis>
+                                  <CategoryAxis fx:id="cate" side="BOTTOM" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis fx:id="number" side="LEFT" />
+                                </yAxis>
+                              </BarChart>
+                           </children>
+                        </AnchorPane>
+                     </center>
+                  </BorderPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

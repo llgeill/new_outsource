@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cn.client.ui.user.UserAttendanceController">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane maxHeight="100.0" style="-fx-background-color: transparent; -fx-border-color: transparent transparent #949494 transparent; -fx-border-width: 1;">
+               <children>
+                  <Pane layoutX="-2.0" prefHeight="83.0" prefWidth="600.0">
+                     <children>
+                        <Label fx:id="attendanceTitle" layoutX="70.0" layoutY="11.0" prefHeight="62.0" prefWidth="118.0" text="考勤一览">
+                           <font>
+                              <Font name="System Bold" size="21.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="35.0" fitWidth="33.0" layoutX="20.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@/static/image/uiImage/userViewImage/userview3.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="-Infinity" prefHeight="120.0" prefWidth="600.0">
+               <children>
+                  <HBox alignment="CENTER" layoutX="173.0" layoutY="-16.0" prefHeight="51.0" prefWidth="600.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fitHeight="39.0" fitWidth="30.0" onMouseClicked="#lastMonth" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@/static/image/uiImage/userViewImage/dateLeft.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="dateLable" text="2017年6月">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="42.0" fitWidth="27.0" onMouseClicked="#nextMonth" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@/static/image/uiImage/userViewImage/dateRight.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefWidth="600.0">
+               <children>
+                  <GridPane fx:id="gridPane" prefHeight="9999.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <StackPane>
+                           <children>
+                              <ImageView pickOnBounds="true" preserveRatio="true" />
+                              <Label alignment="TOP_RIGHT" nodeOrientation="LEFT_TO_RIGHT" text="1">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </StackPane>
+                        <StackPane GridPane.columnIndex="1">
+                           <children>
+                              <ImageView pickOnBounds="true" preserveRatio="true" />
+                              <Label alignment="TOP_RIGHT" nodeOrientation="LEFT_TO_RIGHT" text="2">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children></StackPane>
+                        <StackPane GridPane.columnIndex="2">
+                           <children>
+                              <ImageView pickOnBounds="true" preserveRatio="true" />
+                              <Label alignment="TOP_RIGHT" nodeOrientation="LEFT_TO_RIGHT" text="3">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children></StackPane>
+                        <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="3">
+                           <children>
+                              <ImageView pickOnBounds="true" preserveRatio="true" />
+                              <Label alignment="TOP_RIGHT" nodeOrientation="LEFT_TO_RIGHT" text="4">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children></StackPane>
+                        <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="4">
+                           <children>
+                              <ImageView pickOnBounds="true" preserveRatio="true" />
+                              <Label alignment="TOP_RIGHT" nodeOrientation="LEFT_TO_RIGHT" text="5">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children></StackPane>
+                        <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="5">
+                           <children>
+                              <ImageView pickOnBounds="true" preserveRatio="true" />
+                              <Label alignment="TOP_RIGHT" nodeOrientation="LEFT_TO_RIGHT" text="6">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children></StackPane>
+                        <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="6">
+                           <children>
+                              <ImageView pickOnBounds="true" preserveRatio="true" />
+                              <Label alignment="TOP_RIGHT" nodeOrientation="LEFT_TO_RIGHT" text="7">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children></StackPane>
+                        <StackPane layoutX="524.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="1">
+                           <children>
+                              <ImageView pickOnBounds="true" preserveRatio="true" />
+                              <Label alignment="TOP_RIGHT" nodeOrientation="LEFT_TO_RIGHT" text="8">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children></StackPane>
+                        <StackPane layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <ImageView pickOnBounds="true" preserveRatio="true" />
+                              <Label alignment="TOP_RIGHT" nodeOrientation="LEFT_TO_RIGHT" text="9">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children></StackPane>
+                        <StackPane layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <children>
+                              <ImageView pickOnBounds="true" preserveRatio="true" />
+                              <Label alignment="TOP_RIGHT" nodeOrientation="LEFT_TO_RIGHT" text="10">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children></StackPane>
+                        <StackPane layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                           <children>
+                              <ImageView pickOnBounds="true" preserveRatio="true" />
+                              <Label alignment="TOP_RIGHT" nodeOrientation="LEFT_TO_RIGHT" text="11">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children></StackPane>
+                        <StackPane layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                           <children>
+                              <ImageView pickOnBounds="true" preserveRatio="true" />
+                              <Label alignment="TOP_RIGHT" nodeOrientation="LEFT_TO_RIGHT" text="12">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children></StackPane>
+                        <StackPane layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                           <children>
+                              <ImageView pickOnBounds="true" preserveRatio="true" />
+                              <Label alignment="TOP_RIGHT" nodeOrientation="LEFT_TO_RIGHT" text="13">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children></StackPane>
+                        <StackPane layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                           <children>
+                              <ImageView pickOnBounds="true" preserveRatio="true" />
+                              <Label alignment="TOP_RIGHT" nodeOrientation="LEFT_TO_RIGHT" text="14">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children></StackPane>
+                        <StackPane layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="2">
+                           <children>
+                              <ImageView pickOnBounds="true" preserveRatio="true" />
+                              <Label alignment="TOP_RIGHT" nodeOrientation="LEFT_TO_RIGHT" text="15">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children></StackPane>
+                        <StackPane layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <ImageView pickOnBounds="true" preserveRatio="true" />
+                              <Label alignment="TOP_RIGHT" nodeOrientation="LEFT_TO_RIGHT" text="16">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children></StackPane>
+                        <StackPane layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <children>
+                              <ImageView pickOnBounds="true" preserveRatio="true" />
+                              <Label alignment="TOP_RIGHT" nodeOrientation="LEFT_TO_RIGHT" text="17">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children></StackPane>
+                        <StackPane layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                           <children>
+                              <ImageView pickOnBounds="true" preserveRatio="true" />
+                              <Label alignment="TOP_RIGHT" nodeOrientation="LEFT_TO_RIGHT" text="18">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children></StackPane>
+                        <StackPane layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                           <children>
+                              <ImageView pickOnBounds="true" preserveRatio="true" />
+                              <Label alignment="TOP_RIGHT" nodeOrientation="LEFT_TO_RIGHT" text="19">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children></StackPane>
+                        <StackPane layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                           <children>
+                              <ImageView pickOnBounds="true" preserveRatio="true" />
+                              <Label alignment="TOP_RIGHT" nodeOrientation="LEFT_TO_RIGHT" text="20">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children></StackPane>
+                        <StackPane layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                           <children>
+                              <ImageView pickOnBounds="true" preserveRatio="true" />
+                              <Label alignment="TOP_RIGHT" nodeOrientation="LEFT_TO_RIGHT" text="21">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children></StackPane>
+                        <StackPane layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="3">
+                           <children>
+                              <ImageView pickOnBounds="true" preserveRatio="true" />
+                              <Label alignment="TOP_RIGHT" nodeOrientation="LEFT_TO_RIGHT" text="22">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children></StackPane>
+                        <StackPane layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <children>
+                              <ImageView pickOnBounds="true" preserveRatio="true" />
+                              <Label alignment="TOP_RIGHT" nodeOrientation="LEFT_TO_RIGHT" text="23">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children></StackPane>
+                        <StackPane layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                           <children>
+                              <ImageView pickOnBounds="true" preserveRatio="true" />
+                              <Label alignment="TOP_RIGHT" nodeOrientation="LEFT_TO_RIGHT" text="24">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children></StackPane>
+                        <StackPane layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                           <children>
+                              <ImageView pickOnBounds="true" preserveRatio="true" />
+                              <Label alignment="TOP_RIGHT" nodeOrientation="LEFT_TO_RIGHT" text="25">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children></StackPane>
+                        <StackPane layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                           <children>
+                              <ImageView pickOnBounds="true" preserveRatio="true" />
+                              <Label alignment="TOP_RIGHT" nodeOrientation="LEFT_TO_RIGHT" text="26">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children></StackPane>
+                        <StackPane layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                           <children>
+                              <ImageView pickOnBounds="true" preserveRatio="true" />
+                              <Label alignment="TOP_RIGHT" nodeOrientation="LEFT_TO_RIGHT" text="27">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children></StackPane>
+                        <StackPane layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="3">
+                           <children>
+                              <ImageView pickOnBounds="true" preserveRatio="true" />
+                              <Label alignment="TOP_RIGHT" nodeOrientation="LEFT_TO_RIGHT" text="28">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children></StackPane>
+                        <StackPane layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="4">
+                           <children>
+                              <ImageView pickOnBounds="true" preserveRatio="true" />
+                              <Label alignment="TOP_RIGHT" nodeOrientation="LEFT_TO_RIGHT" text="29">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children></StackPane>
+                        <StackPane layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <children>
+                              <ImageView pickOnBounds="true" preserveRatio="true" />
+                              <Label alignment="TOP_RIGHT" nodeOrientation="LEFT_TO_RIGHT" text="30">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children></StackPane>
+                        <StackPane layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                           <children>
+                              <ImageView pickOnBounds="true" preserveRatio="true" />
+                              <Label alignment="TOP_RIGHT" nodeOrientation="LEFT_TO_RIGHT" text="31">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children></StackPane>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets left="2.0" />
+   </padding>
+</AnchorPane>

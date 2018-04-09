@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ButtonType?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<DialogPane fx:id="loginDialogPane" expanded="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="316.0" prefWidth="453.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cn.client.ui.login.LoginDialogController">
+   <buttonTypes>
+      <ButtonType fx:constant="FINISH" />
+      <ButtonType fx:constant="APPLY" />
+   </buttonTypes>
+   <content>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="269.0" prefWidth="453.0" style="-fx-background-color: transparent;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="468.0" layoutX="8.0" layoutY="-1.0" pickOnBounds="true" AnchorPane.leftAnchor="-12.0" AnchorPane.rightAnchor="-3.0">
+               <image>
+                  <Image url="@/uiImage/login.jpg" />
+               </image>
+            </ImageView>
+            <TextField fx:id="username" layoutX="122.0" layoutY="164.0" prefHeight="30.0" prefWidth="215.0" promptText="请输入账号" />
+            <CheckBox fx:id="autoLogin" layoutX="122.0" layoutY="247.0" mnemonicParsing="false" text="自动登录" />
+            <CheckBox fx:id="rememberPassword" layoutX="252.0" layoutY="247.0" mnemonicParsing="false" text="记住密码" />
+            <PasswordField fx:id="password" layoutX="122.0" layoutY="207.0" prefHeight="29.0" prefWidth="215.0" promptText="请输入密码" />
+            <ImageView fx:id="landerImage" fitHeight="19.0" fitWidth="20.0" layoutX="4.0" layoutY="5.0" onMouseClicked="#lander" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/uiImage/user.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="minImage" fitHeight="33.0" fitWidth="30.0" layoutX="394.0" layoutY="3.0" onMouseClicked="#minimize" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/static/image/uiImage/window/window_min_normal.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="closeImage" fitHeight="33.0" fitWidth="30.0" layoutX="424.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/static/image/uiImage/window/window_close_normal.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="landerLabel" layoutX="29.0" layoutY="7.0" text="用户登录" textFill="#fcf9f9" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets></AnchorPane>
+   </content>
+</DialogPane>

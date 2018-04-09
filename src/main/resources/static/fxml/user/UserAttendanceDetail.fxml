@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ButtonType?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<DialogPane fx:id="userAttendanceDetail" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="551.0" style="-fx-border-color: gray; -fx-border-width: 1px;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cn.client.ui.user.UserAttendanceDetailController">
+    <header>
+      <AnchorPane maxHeight="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="431.0" prefWidth="545.0">
+         <children>
+            <TableView fx:id="tableView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="436.0" prefWidth="545.0" style="-fx-background-color: transparent; -fx-border-width: 1px;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columns>
+                <TableColumn fx:id="startColumn" prefWidth="75.0" style="-fx-pref-height: 50px; -fx-font-size: 15px;" text="登陆时间" />
+                <TableColumn fx:id="endColumn" prefWidth="75.0" style="-fx-pref-height: 50px;-fx-font-size: 15px" text="退出时间" />
+                  <TableColumn fx:id="statusColumn" prefWidth="75.0" style="-fx-pref-height: 50px;-fx-font-size: 15px;-fx-alignment: center" text="退出状态" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TableView>
+         </children></AnchorPane>
+    </header>
+   <buttonTypes>
+      <ButtonType fx:constant="CLOSE" />
+   </buttonTypes>
+</DialogPane>

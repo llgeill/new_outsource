@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-radius: 3px; -fx-border-color: gray; -fx-border-radius: 3px; -fx-border-radius: 3px;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cn.client.ui.user.UserController">
+   <children>
+      <BorderPane fx:id="borderPane" prefHeight="400.0" prefWidth="600.0" style="-fx-border-color: gray;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="30.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(#39B776,#35AC77);" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="closeImage" fitHeight="47.0" fitWidth="42.0" layoutX="554.0" opacity="0.5" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="0.0">
+                     <image>
+                        <Image url="@/static/image/uiImage/window/window_close_normal.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="minImage" fitHeight="47.0" fitWidth="42.0" layoutX="488.0" layoutY="-1.0" opacity="0.6" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="0.0">
+                     <image>
+                        <Image url="@/static/image/uiImage/window/window_min_normal.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="maxImage" fitHeight="47.0" fitWidth="42.0" layoutX="527.0" layoutY="-1.0" opacity="0.5" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="0.0">
+                     <image>
+                        <Image url="@/static/image/uiImage/window/window_max_normal.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="closeImage1" fitHeight="47.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@/static/image/uiImage/icon.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="35.0" layoutY="8.0" style="-fx-text-fill: white;" text="外包人员管理系统">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+         </top>
+         <left>
+            <AnchorPane prefHeight="338.0" prefWidth="70.0" style="-fx-background-color: #EAEAEA;" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox fx:id="leftVBox" prefHeight="313.0" prefWidth="73.0" AnchorPane.bottomAnchor="37.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fx:id="myTask" fitHeight="35.0" fitWidth="33.0" onMouseClicked="#myTaskMouse" onMouseEntered="#myTaskEnter" onMouseExited="#myTaskExit" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@/static/image/uiImage/userViewImage/userview1.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets left="20.0" top="20.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <ImageView fx:id="otherTask" fitHeight="35.0" fitWidth="37.0" onMouseClicked="#otherTaskMouse" onMouseEntered="#otherTaskEnter" onMouseExited="#otherTaskExit" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@/static/image/uiImage/userViewImage/userview2.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets left="20.0" top="50.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <ImageView fx:id="attendance" fitHeight="33.0" fitWidth="33.0" onMouseClicked="#attendanceMouse" onMouseEntered="#attendanceEnter" onMouseExited="#attendanceExit" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@/static/image/uiImage/userViewImage/userview3.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets left="20.0" top="50.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <ImageView fx:id="person" fitHeight="35.0" fitWidth="35.0" onMouseClicked="#personMouse" onMouseEntered="#personEnter" onMouseExited="#personExit" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@/static/image/uiImage/userViewImage/userview4.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets left="20.0" top="50.0" />
+                           </VBox.margin>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <Separator maxWidth="6.0" minWidth="6.0" orientation="VERTICAL" prefHeight="346.0" prefWidth="6.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <padding>
+                        <Insets left="12.0" />
+                     </padding>
+                  </Separator>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin></AnchorPane>
+         </center></BorderPane>
+   </children>
+</AnchorPane>
